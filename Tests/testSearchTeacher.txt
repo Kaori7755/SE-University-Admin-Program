@@ -1,0 +1,15 @@
+import Operation.*;
+import Info.*;
+
+public class TestStory {
+    public static void main(String[] args) throws ItemInList {
+        //get Uni reference
+        Uni uni = Uni.reference();
+        //load the file that contains information of teacher
+        FileIO.fileRead("C:\\Users\\Kaori\\OneDrive\\Documents\\fileAe2.txt",uni);
+        //check information stored in the file
+        uni.printAllInfo();
+        //admin use searchTeacher() to search for the training course "PowerPoint" and find teachers who attend the course
+        System.out.println(Admin.searchTeacher("PowerPoint",uni));
+    }
+}

@@ -1,0 +1,12 @@
+public class TestStory {
+    public static void main(String[] args) throws ItemInList {
+        //get Uni reference
+        Uni uni = Uni.reference();
+        //create a IT course object
+       Course it = new Course("IT");
+       //create a new teaching requirement - Lab1 and add it to the IT course
+        ClassDirector.createTeaReqList(it,new TeachingReq("Lab1","Programming",12),uni);
+        //admin use searchTeaReq to search for the teaching requirement of IT course
+        System.out.println("List of teaching requirement: " + Admin.searchTeaReq(it,uni));
+    }
+}

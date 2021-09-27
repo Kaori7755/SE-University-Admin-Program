@@ -1,0 +1,17 @@
+import Operation.*;
+import Info.*;
+
+public class TestStory {
+    public static void main(String[] args) throws ItemInList {
+        //get Uni reference
+        Uni uni = Uni.reference();
+        //create IT course object
+        Course it = new Course("IT");
+        //class director use createTeaReqList to create new TeachingReq object and add the object to the IT Course classRequirement list
+        //the name of the teaching requirement lab is lab1, it requires Programming training and 12 staff
+        ClassDirector.createTeaReqList(it, new TeachingReq("lab1","Programming",12),uni);
+        //check if the teaching requirement of IT course is created
+        it.getReq();
+
+    }
+}
